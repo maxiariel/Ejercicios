@@ -1,8 +1,12 @@
-let caracteres='Hola mundo'
-let cantidad= caracteres.length
-console.log(cantidad)
+let familia = {
+  mama: "Fernanda",
+  papa: "Maximiliano",
+  hija1: "Evelyn",
+  hija2: "Tamara",
+};
+console.log(familia);
 
-for(let i=1;i<=3; i++){
-  console.log(caracteres)
-}
-caracteres.substr(0,4)
+const colores = ["rojo", "verde", "amarillo"];
+colores.forEach(function (el, index) {
+  console.log(`Id="${index}${el}`);
+});
