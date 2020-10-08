@@ -13,35 +13,83 @@
 
 
 
+    /*
+        function ejemplo1() {
+          let caracteres = "Hola mundo";
+          console.log(caracteres.length);
+        }
+        ejemplo1()
+    
+        function ejemplo2() {
+          let saludo = "Hola Mundo";
+          console.log(saludo.substr(0, 4))
+        }
+        ejemplo2()
+    
+        function ejemplo3() {
+          let saludo = "Hola mundo"
+          for (let i = 0; i <= 2; i++) {
+            console.log(i + saludo)
+          }
+        }
+        ejemplo3()
+    
+        function ejemplo4() {
+    
+          let saludo = "Hola que tal"
+          console.log(saludo.split(" "));
+    
+        }
+        ejemplo4()
+    
+        function ejemplo5() {
+    
+          let texto = "Hola Mundo";
+          let textoinvertido = "";
+    
+          for (let i = texto.length - 1; i >= 0; i--) {
+            textoinvertido += texto[i];
+          }
+    
+    
+          console.log(textoinvertido);
+        }
+        ejemplo5()
+    
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+        for (let i = 0; i < numeros.length; i++) {
+          if (i % 2 === 0) {
+            continue
+          }
+          console.log(numeros[i])
+        }
+    
+        let repetido = "Hola mundo adios mundo"*/
 
-    function ejemplo1() {
-      let caracteres = "Hola mundo";
-      console.log(caracteres.length);
+    function Animal(nombre, edad, raza, especie) {
+      this.nombre = nombre,
+        this.edad = edad,
+        this.raza = raza,
+        this.especie = especie;
+
+
     }
-    ejemplo1()
-
-    function ejemplo2() {
-      let saludo = "Hola Mundo";
-      console.log(saludo.substr(0, 4))
+    Animal.prototype.sonido = function (ruido) {
+      console.log(`Hago este ruido ${ruido}`)
     }
-    ejemplo2()
+    Animal.prototype.saludar = function () {
+      console.log(`Hola mi nombre es ${this.nombre}`)
+    };
+    const gato = new Animal("sparky", 5, "mestizo", "felina");
+    const gato2 = new Animal("Pipper", 5, "Mestizo", "Felino");
+    const perro = new Animal("Myka", 2, "Siberiano", "Canina");
 
-    function ejemplo3() {
-      let saludo = "Hola mundo"
-      for (let i = 0; i <= 2; i++) {
-        console.log(i, saludo)
-      }
-    }
-    ejemplo3()
+    //console.log(gato, gato2, perro)
+    //gato.saludar(), gato.sonido("Miau");
 
-    function ejemplo4() {
+    //console.log(perro[perro.saludar(), perro.sonido("Guau")]);
 
-      let saludo = "Hola que tal"
-      console.log(saludo.split(" "));
-
-    }
-    ejemplo4()
-
+    console.log(perro, Animal[perro.saludar(), perro.sonido("Guauu!!")])
   </script>
 
 </body>
