@@ -64,32 +64,41 @@
           console.log(numeros[i])
         }
     
-        let repetido = "Hola mundo adios mundo"*/
+        let repetido = "Hola mundo adios mundo"
+        */
 
     function Animal(nombre, edad, raza, especie) {
       this.nombre = nombre,
         this.edad = edad,
         this.raza = raza,
         this.especie = especie;
-
-
     }
+
     Animal.prototype.sonido = function (ruido) {
-      console.log(`Hago este ruido ${ruido}`)
+      return (`Hago este ruido ${ruido}`)
     }
     Animal.prototype.saludar = function () {
-      console.log(`Hola mi nombre es ${this.nombre}`)
+      return (`Hola mi nombre es ${this.nombre}`)
     };
     const gato = new Animal("sparky", 5, "mestizo", "felina");
     const gato2 = new Animal("Pipper", 5, "Mestizo", "Felino");
     const perro = new Animal("Myka", 2, "Siberiano", "Canina");
 
-    //console.log(gato, gato2, perro)
-    //gato.saludar(), gato.sonido("Miau");
+    console.log(perro.saludar(), perro.sonido("Guaauu"));
+    console.log(perro);
 
-    //console.log(perro[perro.saludar(), perro.sonido("Guau")]);
+    console.log(gato.saludar(), gato.sonido("Miaaauuu"));
+    console.log(gato)
 
-    console.log(perro, Animal[perro.saludar(), perro.sonido("Guauu!!")])
+    console.log(gato2.saludar(), gato2.sonido("Miauuu"));
+    console.log(gato2)
+
+
+
+
+
+
+
   </script>
 
 </body>
