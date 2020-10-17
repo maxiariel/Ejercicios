@@ -10,10 +10,11 @@ const ejercicio1= (cadena)=>{
      console.log("No se ingreso ningun caracter")
    }
   }
+  
    ejercicio1()
    ejercicio1(5)
    ejercicio1(false)
-   ejercicio1("asi esta la cosa pais")
+   ejercicio1("hola fernanda")
 
    const ejercicio2 =(cadena)=>{
      if(typeof cadena==="number"){
@@ -78,3 +79,58 @@ const ejercicio5 =(cadena="")=>{
 }
 ejercicio5("en reversa")
 
+const ejercicio6=(cadena="",palabra="")=>{
+  if (!cadena){
+  console.log(" no ingresaste una cadena")
+} if (!palabra){
+  console.log(" no se ingreso palabra a buscar")
+}
+let texto=0;
+let cantidadVeces=0;
+
+  while(texto!==-1){
+    texto=cadena.indexOf(palabra,texto)
+    if(texto!==-1){
+      texto++;
+      cantidadVeces++;
+    }
+  }
+  console.log(`En la cadena ingresa la palabra ${palabra} se repite ${cantidadVeces} veces.`);
+
+}
+ejercicio6("hola mundo hola pais hola ","hola")
+
+
+
+const ejercicio7=(palabra="")=>{
+  if (!palabra){
+    return console.log("no ingresaste ninguna palabra")
+  }
+  if(palabra===palabra){
+    palabra= palabra.toUpperCase()
+  }
+  if(palabra===palabra.split("").reverse().join("")){
+  console.log(`La palabra ${palabra} es un palindromo`)
+  }else{
+    console.log(`La palabra ${palabra} NO es palindroma `)
+  }
+}
+
+ejercicio7()
+ejercicio7("MeNeM")
+ejercicio7("hola")
+
+
+const ejercicio8=(texto="",eliminar="")=>{
+  if (!texto){
+    return console.log("No se ha ingresado ningun texto")
+  }
+  if (!eliminar){
+    return console.log("Por favor ingrese el caracter a eliminar")
+  }else{
+    console.log(texto.replace(new RegExp(eliminar,"ig"),""))
+  }
+}
+ejercicio8();
+ejercicio8("abc1,abc2,abc3,abc4 y abc5")
+ejercicio8("abc1,abc2,abc3,abc4 y abc5","abc")
