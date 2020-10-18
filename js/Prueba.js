@@ -1,3 +1,6 @@
+//la cantidad de caracteres que se escribieron en una cadena
+
+
 const ejercicio1= (cadena)=>{
   
    if(typeof cadena === 'number'){
@@ -16,13 +19,15 @@ const ejercicio1= (cadena)=>{
    ejercicio1(false)
    ejercicio1("hola fernanda")
 
-   const ejercicio2 =(cadena)=>{
+   //sustrae la cantidad de caracteres q elijas de una cadena de texto
+
+   const ejercicio2 =(cadena,cantidad)=>{
      if(typeof cadena==="number"){
        console.log("Eso no es un Texto")
      }else if (typeof cadena=== "boolean"){
        console.log("Es un boolean ingrese un Texto")
      }else if(typeof cadena==="string"){
-       console.log(cadena.substring(0,4))
+       console.log(cadena.substring(0,cantidad))
      }else{
        console.log("eso no es un caracter")
      }
@@ -31,7 +36,9 @@ const ejercicio1= (cadena)=>{
   ejercicio2(2)
   ejercicio2(true)
   ejercicio2()
-  ejercicio2("Hola mundo")
+  ejercicio2("Hola mundo",4)
+
+  //Separa el caracter que uno quiera de  una cadena de texto en un array
 
 const ejercicio3 = (texto,separar=null)=>{
    if(typeof texto==="number"){
@@ -45,6 +52,10 @@ const ejercicio3 = (texto,separar=null)=>{
      }
 }
 ejercicio3 ("vamos a ver si funciona asi"," ")
+
+
+//repite el texto o cadena la cantidad de veces que uno quiera 
+
 
 const ejercicio4 = (cadena="",repetir=undefined)=>{
   if (typeof cadena==="number"){
@@ -66,7 +77,7 @@ ejercicio4("hola mundo",)
 ejercicio4("hola mundo",0)
 ejercicio4("Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptas necessitatibus quam minus recusandae, dignissimos veniam libero, dolore dolorum, beatae tenetur a illum ex quis architecto blanditiis rerum quisquam eveniet!",3)
 
-
+//te devuelve la cadena ingresada escrita al revez
 const ejercicio5 =(cadena="")=>{
   if(typeof cadena==="number"){
    console.log("eso no es una cadena de texto")
@@ -78,6 +89,8 @@ const ejercicio5 =(cadena="")=>{
   
 }
 ejercicio5("en reversa")
+
+//Buscar en una cadena de texto la palabra q se repite y te da como resultado la cantidad de veces que se repite
 
 const ejercicio6=(cadena="",palabra="")=>{
   if (!cadena){
@@ -100,7 +113,7 @@ let cantidadVeces=0;
 }
 ejercicio6("hola mundo hola pais hola ","hola")
 
-
+//te dice si una palabra es palindroma, osea que se escribie y se lee igual del derecho y del revez
 
 const ejercicio7=(palabra="")=>{
   if (!palabra){
@@ -119,7 +132,7 @@ const ejercicio7=(palabra="")=>{
 ejercicio7()
 ejercicio7("MeNeM")
 ejercicio7("hola")
-
+//eliminar uno o varios caracteres del texto que deseen
 
 const ejercicio8=(texto="",eliminar="")=>{
   if (!texto){
@@ -134,7 +147,7 @@ const ejercicio8=(texto="",eliminar="")=>{
 ejercicio8();
 ejercicio8("abc1,abc2,abc3,abc4 y abc5")
 ejercicio8("abc1,abc2,abc3,abc4 y abc5","abc")
-
+//numero aleatorio entre un numero y otro eligiendo parametro minimo y maximo
 const ejercicio9=(min="number",max="number")=>{
   if(typeof min==="string"){
     return console.log("eso no es un numero para empezar")
