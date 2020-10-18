@@ -134,3 +134,20 @@ const ejercicio8=(texto="",eliminar="")=>{
 ejercicio8();
 ejercicio8("abc1,abc2,abc3,abc4 y abc5")
 ejercicio8("abc1,abc2,abc3,abc4 y abc5","abc")
+
+const ejercicio9=(min="number",max="number")=>{
+  if(typeof min==="string"){
+    return console.log("eso no es un numero para empezar")
+  }if(typeof max==="string"){
+    return console.log("ese no es un numero para terminar")
+  }if(typeof min!=="number"){
+    return console.log("Ingresa un numero par empezar")
+  }if(typeof max !=="number"){
+    return console.log("ingrese un numero para terminar")
+  }else{
+  console.log(Math.round(Math.random()*(max-min)+min))
+  }  
+}
+ejercicio9("hola","hola")
+ejercicio9(5,"hola")
+ejercicio9(50,60)
