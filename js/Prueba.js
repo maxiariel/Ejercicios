@@ -19,6 +19,8 @@ const ejercicio1= (cadena)=>{
    ejercicio1(false)
    ejercicio1("hola fernanda")
 
+   console.log("-----------------------")
+
    //sustrae la cantidad de caracteres q elijas de una cadena de texto
 
    const ejercicio2 =(cadena,cantidad)=>{
@@ -37,6 +39,8 @@ const ejercicio1= (cadena)=>{
   ejercicio2(true)
   ejercicio2()
   ejercicio2("Hola mundo",4)
+  
+  console.log("-----------------------")
 
   //Separa el caracter que uno quiera de  una cadena de texto en un array
 
@@ -53,6 +57,7 @@ const ejercicio3 = (texto,separar=null)=>{
 }
 ejercicio3 ("vamos a ver si funciona asi"," ")
 
+console.log("-----------------------")
 
 //repite el texto o cadena la cantidad de veces que uno quiera 
 
@@ -77,6 +82,8 @@ ejercicio4("hola mundo",)
 ejercicio4("hola mundo",0)
 ejercicio4("Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptas necessitatibus quam minus recusandae, dignissimos veniam libero, dolore dolorum, beatae tenetur a illum ex quis architecto blanditiis rerum quisquam eveniet!",3)
 
+console.log("-----------------------")
+
 //te devuelve la cadena ingresada escrita al revez
 const ejercicio5 =(cadena="")=>{
   if(typeof cadena==="number"){
@@ -89,6 +96,8 @@ const ejercicio5 =(cadena="")=>{
   
 }
 ejercicio5("en reversa")
+
+console.log("-----------------------")
 
 //Buscar en una cadena de texto la palabra q se repite y te da como resultado la cantidad de veces que se repite
 
@@ -113,6 +122,8 @@ let cantidadVeces=0;
 }
 ejercicio6("hola mundo hola pais hola ","hola")
 
+console.log("-----------------------")
+
 //te dice si una palabra es palindroma, osea que se escribie y se lee igual del derecho y del revez
 
 const ejercicio7=(palabra="")=>{
@@ -132,6 +143,9 @@ const ejercicio7=(palabra="")=>{
 ejercicio7()
 ejercicio7("MeNeM")
 ejercicio7("hola")
+
+console.log("-----------------------")
+
 //eliminar uno o varios caracteres del texto que deseen
 
 const ejercicio8=(texto="",eliminar="")=>{
@@ -147,13 +161,14 @@ const ejercicio8=(texto="",eliminar="")=>{
 ejercicio8();
 ejercicio8("abc1,abc2,abc3,abc4 y abc5")
 ejercicio8("abc1,abc2,abc3,abc4 y abc5","abc")
+
+console.log("-----------------------")
+
 //numero aleatorio entre un numero y otro eligiendo parametro minimo y maximo
+
 const ejercicio9=(min="number",max="number")=>{
-  if(typeof min==="string"){
-    return console.log("eso no es un numero para empezar")
-  }if(typeof max==="string"){
-    return console.log("ese no es un numero para terminar")
-  }if(typeof min!=="number"){
+  
+  if(typeof min!=="number"){
     return console.log("Ingresa un numero par empezar")
   }if(typeof max !=="number"){
     return console.log("ingrese un numero para terminar")
@@ -163,4 +178,130 @@ const ejercicio9=(min="number",max="number")=>{
 }
 ejercicio9("hola","hola")
 ejercicio9(5,"hola")
-ejercicio9(50,60)
+ejercicio9(501,600)
+
+console.log("-----------------------")
+
+
+
+const ejercicio9b=(min="number",max="number")=>{
+  switch (ejercicio9b) {
+    case  min!=="number" :
+     console.warn("ese no es un numero")
+     break;
+    case  max!=="number":
+     console.warn("ese no es un numero")
+     break; 
+      default:console.log(Math.round(Math.random()*(max-min)+min))
+     break;
+  }
+}
+ejercicio9b()
+ejercicio9b(5,"hola")
+ejercicio9b(501,600)
+
+
+console.log("-----------------------")
+
+
+const ejercicio10=(numero=0)=>{
+if (!numero) return console.warn("no ingresaste ningun numero")
+if (typeof numero!=="number") return console.info("eso no es un numero")    
+if (numero.toString().split("").reverse().join("")==numero) {
+  return console.info(`el numero ${numero} ingresado es capicua`)
+}else{
+  console.info(`el numero ${numero} ingresado no es capicua`)
+}  
+}
+
+ejercicio10(2235)
+
+console.log("-----------------------")
+
+const ejercicio11=(numero)=>{
+  if (typeof numero !=="number") return console.info("el dato ingresado no es un numero")
+  if (numero=== 0) return console.info("el numero 0 no puede ser factorial")
+  if (Math.sign(numero)=== -1) return console.info("el numero factorial no puede ser negativo")
+  
+  let factorial = 1;
+  for (let i = numero; i > 1; i--){
+    factorial=factorial*i
+  }
+  return console.log(`el factorial del numero ${numero} es igual a ${factorial}`)
+}
+
+ejercicio11("")
+ejercicio11()
+ejercicio11(0)
+ejercicio11(-2)
+ejercicio11(7)
+
+console.log("-----------------------")
+
+
+const ejercicio12=(numero)=>{
+  if (typeof numero !=="number") return console.info("el dato ingresado no es un numero")
+  if (numero=== 0) return console.info("el numero 0 no puede ser primo")
+  if (Math.sign(numero)=== -1) return console.info("el numero primo no puede ser negativo")
+
+  let primo= false
+  for (let i=2; i< numero;i++){
+    if((numero % i)=== 0)
+    primo=true
+  }
+  if (primo===true) return console.log(`el numero ${numero} no es primo`)
+  else return console.log(`el numero ${numero} es primo`)
+}
+
+ejercicio12()
+ejercicio12("")
+ejercicio12(0)
+ejercicio12(-78)
+ejercicio12(159)
+ejercicio12(650)
+
+console.log("-----------------------")
+
+
+const ejercicio13=(numero)=>{
+if (typeof numero !=="number") return console.info("el dato ingresado no es un numero")
+
+let dividir=2
+if((numero % dividir)=== 0) return console.log(`el numero ${numero} es par`)
+else return console.log(`el numero ${numero} es impar`)
+
+}
+
+ejercicio13("5")
+ejercicio13(0)
+ejercicio13(-58)
+ejercicio13(99)
+
+console.log("-----------------------")
+
+const ejercicio14=(grados,unidad)=>{
+   if (typeof grados !=="number") return console.info("el dato ingresado no es un numero")
+   if(typeof unidad!=="string") return console.warn("no es una unidad")
+   if(unidad!=="c"||"f") return console.warn("esa no es una unidad")
+   
+   
+
+   if ( unidad === "c"){
+     let gradosc= undefined
+   gradosc=(grados*(9/5)+32)      
+   let gradosf= gradosc
+      return console.log(`los grados ${grados}ºC equivalen a ${gradosf}ºF`)
+    }
+   if(unidad ==="f"){
+     let gradosf =undefined
+     gradosf=((grados-32)*5/9)
+     let gradosc= gradosf
+     return console.log(`los grados ${grados}ºF equivalen a ${gradosc}ºC`)
+   }
+
+   
+
+}
+ejercicio14(32,"f")
+ejercicio14(0,"c")
+ejercicio14(40,"a")
