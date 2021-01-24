@@ -282,9 +282,7 @@ console.log("-----------------------")
 const ejercicio14=(grados,unidad)=>{
    if (typeof grados !=="number") return console.info("el dato ingresado no es un numero")
    if(typeof unidad!=="string") return console.warn("no es una unidad")
-   if(unidad!=="c"||"f") return console.warn("esa no es una unidad")
-   
-   
+   unidad=unidad.toLowerCase()  
 
    if ( unidad === "c"){
      let gradosc= undefined
@@ -297,11 +295,133 @@ const ejercicio14=(grados,unidad)=>{
      gradosf=((grados-32)*5/9)
      let gradosc= gradosf
      return console.log(`los grados ${grados}ºF equivalen a ${gradosc}ºC`)
-   }
+   } else (unidad!=="c"||"f");
+     console.warn("esa no es una unidad")
+  
 
    
 
 }
+ejercicio14(89,"F")
 ejercicio14(32,"f")
 ejercicio14(0,"c")
 ejercicio14(40,"a")
+
+
+console.log("-----------------------")
+// ME QUEDO FALLIDO YA LO VOY A CORROBORAR
+/*const ejercicio15 = (binario,decimal) =>{
+ 
+ let invertido = binario.toString().split("").reverse().join("")
+  
+ 
+ for(let i=0;i<invertido.length; i++){
+   let separado= invertido.substring(i,i+1);
+   let  resultado = separado*(2**i)
+   let result= 0
+   typeof resultado === 'number' && (resultado+=result);
+   
+   //console.log(separado*(2**i))
+   //console.log(i + separado)
+   console.log( resultado)
+   //console.log(invertido*(2**i))
+   //console.log(2**i)
+   decimal =resultado
+   
+   //console.log(decimal)
+
+ }
+
+ invertido=parseInt(invertido)
+ console.log (typeof invertido)
+ return console.log(`El numero ${binario} binario es igual al numero ${decimal} decimal `)
+ 
+
+ 
+}
+
+ejercicio15(1100100, )*/
+
+// EL ANTERIOR AYUDADO POR MATY.
+const ejercicio15 = (binario=0, decimal=0) => {
+  if (typeof binario==="string") return console.warn("no es un dato numerico");
+  
+  if(!binario) return console.warn("ese no es un numero")
+  
+  if (typeof binario ==="number"){
+  let result = parseInt(binario, 2);
+decimal=result
+
+  return console.log(`El numero ${binario} binario es igual al numero ${decimal} decimal `);
+}
+
+
+};
+ejercicio15();
+ejercicio15("s")
+ejercicio15(1100100);
+
+
+console.log("-----------------------")
+
+const ejercico16 = (porcentaje, numero)=>{
+   if (porcentaje===undefined) return console.warn("Ingrese un numero")
+  
+  if (porcentaje==="string") return console.warn("El dato tiene q ser un numero")
+  if(numero===undefined) return console.warn ("Ingrese un numero")
+ 
+  if (typeof numero==="string") return console.warn("El dato tiene q ser un NUMERO")
+  
+  if (typeof numero || porcentaje === "number") {
+    let resultado= (porcentaje * numero) / 100
+    resultado= numero - resultado
+    return console.log(`el ${porcentaje} %  ${numero}  = ${resultado}`)
+  
+  }
+}
+
+ejercico16 ()
+ejercico16 (10,100)
+ejercico16 ("")
+ejercico16 (5,300)
+
+
+console.log("-----------------------")
+
+const ejercicio17=(year=0,month=0,day=0)=>{
+
+  if(!year) return console.warn("ingrese un numero")
+  if(!month) return console.warn("ingrese un numero")
+  if(!day) return console.warn("ingrese un numero")
+
+  if(typeof year==="string") return console.error("ingrese un numero")
+  if(typeof month==="string") return console.error("ingrese un numero")
+  if(typeof day==="string") return console.error("ingrese un numero")
+  
+
+  else{
+  let mes= month-1
+  let cumple= new Date (year,mes,day)
+  let actual=  Date.now();  
+  let result= actual - cumple
+  result= result/1000
+  result=result/86400  
+  result=result/365
+
+  console.log (`Tu edad es de ${Math.floor(result)} años`)
+}
+}
+ejercicio17()
+ejercicio17(1950,"3")
+ejercicio17("2",2,16)
+ejercicio17(1988,2,16)
+ejercicio17(1988,12,12)
+ejercicio17(2016,2,20)
+ejercicio17(2020,4,30)
+
+
+console.log("-----------------------")
+
+const ejercicio18=()=>{
+  
+}
